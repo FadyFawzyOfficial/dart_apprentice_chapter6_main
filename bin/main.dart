@@ -1,3 +1,4 @@
-void main(List<String> arguments) {
-  print('Hello world!');
-}
+// Dart Apprentice by Eng. Fady Fawzy
+// Chapter 6: Classes
+
+void main() {}
