@@ -8,7 +8,7 @@ void main() {
 }
 
 void dartClasses() {
-  final user = User();
+  var user = User();
   // final user = new User();
   user.name = 'Ray';
   user.id = 42;
