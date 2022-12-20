@@ -9,13 +9,17 @@ class User {
   User(this.id, this.name);
 
   // Named Constructor
-  User.anonymous() {
-    id = 0;
-    name = 'anonymous';
-  }
+  // User.anonymous() {
+  //   id = 0;
+  //   name = 'anonymous';
+  // }
 
-  int id = 0;
-  String name = '';
+  // Forwarding Constructor
+  User.anonymous() : this(0, 'anonymous');
+
+  // Dart is finally convinced that id and name are guaranteed to be initialized.
+  int id;
+  String name;
 
   String toJson() => '{"id": $id, "name": "$name"}';
 
