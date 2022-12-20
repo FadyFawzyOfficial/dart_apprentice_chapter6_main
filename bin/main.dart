@@ -5,23 +5,27 @@ import 'user.dart';
 
 void main() {
   dartClasses();
+  constructors();
 }
 
 void dartClasses() {
-  var user = User();
+  // var user = User();
   // final user = new User();
-  user.id = 42;
-  user.name = 'Ray';
-  final user2 = User()
-    ..id = 1
-    ..name = 'Fady';
-  print(user);
-  print(user.toJson());
-  print(user2);
-  print(user2.toJson());
+  // user.id = 42;
+  // user.name = 'Ray';
+  // final user2 = User()
+  //   ..id = 1
+  //   ..name = 'Fady';
+  // print(user);
+  // print(user.toJson());
+  // print(user2);
+  // print(user2.toJson());
 }
 
-void constructors() {}
+void constructors() {
+  final user = User(25, 'Fady');
+  print(user);
+}
 
 class Address {
   // Address(); // Default Constructor

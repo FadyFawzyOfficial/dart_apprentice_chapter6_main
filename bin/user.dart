@@ -1,4 +1,10 @@
 class User {
+  // Long Form Constructor
+  User(int id, String name) {
+    this.id = id;
+    this.name = name;
+  }
+
   int id = 0;
   String name = '';
 
