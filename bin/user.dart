@@ -1,9 +1,12 @@
 class User {
   // Long Form Constructor
-  User(int id, String name) {
-    this.id = id;
-    this.name = name;
-  }
+  // User(int id, String name) {
+  //   this.id = id;
+  //   this.name = name;
+  // }
+
+  // Short Form Constructor
+  User(this.id, this.name);
 
   int id = 0;
   String name = '';
