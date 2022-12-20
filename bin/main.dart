@@ -23,7 +23,7 @@ void dartClasses() {
 }
 
 void constructors() {
-  final user = User(25, 'Fady');
+  final user = User(id: 25, name: 'Fady');
   print(user);
   final anonymousUser = User.anonymous();
   print(anonymousUser);

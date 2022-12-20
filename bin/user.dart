@@ -6,7 +6,7 @@ class User {
   // }
 
   // Short Form Constructor
-  User(this.id, this.name);
+  // User(this.id, this.name);
 
   // Named Constructor
   // User.anonymous() {
@@ -15,9 +15,15 @@ class User {
   // }
 
   // Forwarding Constructor
-  User.anonymous() : this(0, 'anonymous');
+  // User.anonymous() : this(0, 'anonymous');
 
-  // Dart is finally convinced that id and name are guaranteed to be initialized.
+  // Adding named parameters for User
+  //* Unnamed Constructor
+  User({this.id = 0, this.name = 'anonymous'});
+  //* Named Constructor
+  User.anonymous() : this();
+
+  //* Dart is finally convinced that id and name are guaranteed to be initialized.
   int id;
   String name;
 
