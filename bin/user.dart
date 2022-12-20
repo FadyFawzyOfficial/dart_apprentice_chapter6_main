@@ -8,6 +8,12 @@ class User {
   // Short Form Constructor
   User(this.id, this.name);
 
+  // Named Constructor
+  User.anonymous() {
+    id = 0;
+    name = 'anonymous';
+  }
+
   int id = 0;
   String name = '';
 
