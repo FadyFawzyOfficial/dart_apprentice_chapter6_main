@@ -32,8 +32,8 @@ class User {
   User.anonymous() : this();
 
   //* Dart is finally convinced that id and name are guaranteed to be initialized.
-  int _id;
-  String _name;
+  final int _id;
+  final String _name;
 
   String toJson() => '{"id": $_id, "name": "$_name"}';
 
