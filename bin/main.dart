@@ -37,6 +37,10 @@ void constructors() {
   // final jb = User(id: -1, name: 'JB Lorenzo');
   const jb = User(id: 100, name: 'JB Lorenzo');
   print(jb);
+
+  final map = {'id': 10, 'name': 'Fady'};
+  final fady = User.fromJson(map);
+  print(fady);
 }
 
 class Address {

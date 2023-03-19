@@ -26,6 +26,16 @@ class User {
   //* Named Constructor
   const User.anonymous() : this();
 
+  // User.fromJson(Map<String, Object> map)
+  //     : _id = map['id'] as int,
+  //       _name = map['name'] as String;
+
+  factory User.fromJson(Map<String, Object> map) {
+    final userId = map['id'] as int;
+    final userName = map['name'] as String;
+    return User(id: userId, name: userName);
+  }
+
   //* Dart is finally convinced that id and name are guaranteed to be initialized.
   final int _id;
   final String _name;
