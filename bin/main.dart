@@ -33,6 +33,10 @@ void constructors() {
   final anonymousUser = User.anonymous();
   print(anonymousUser);
   // User(id: 0, name: anonymous)
+
+  // final jb = User(id: -1, name: 'JB Lorenzo');
+  final jb = User(id: 100, name: 'JB Lorenzo');
+  print(jb);
 }
 
 class Address {

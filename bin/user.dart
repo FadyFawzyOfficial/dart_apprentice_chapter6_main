@@ -20,7 +20,9 @@ class User {
   // Adding named parameters for User
   //* Unnamed Constructor
   User({int id = 0, String name = 'anonymous'})
-      : _id = id,
+      : assert(id >= 0),
+        assert(name.isNotEmpty),
+        _id = id,
         _name = name {
     //* The constructor would initialize _id and _name before it ran the print
     //* statement inside the braces.
