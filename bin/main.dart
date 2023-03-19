@@ -23,19 +23,19 @@ void dartClasses() {
 }
 
 void constructors() {
-  final user = User(id: 25, name: 'Fady');
+  const user = User(id: 25, name: 'Fady');
   print(user);
   // User(id: 25, name: Fady)
-  final vicki = User(id: 24, name: 'Vicki');
+  const vicki = User(id: 24, name: 'Vicki');
   // vicki.name = 'Nefarious Hacker';
   print(vicki);
   // User(id: 24, name: Vicki)
-  final anonymousUser = User.anonymous();
+  const anonymousUser = User.anonymous();
   print(anonymousUser);
   // User(id: 0, name: anonymous)
 
   // final jb = User(id: -1, name: 'JB Lorenzo');
-  final jb = User(id: 100, name: 'JB Lorenzo');
+  const jb = User(id: 100, name: 'JB Lorenzo');
   print(jb);
 }
 

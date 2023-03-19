@@ -19,17 +19,12 @@ class User {
 
   // Adding named parameters for User
   //* Unnamed Constructor
-  User({int id = 0, String name = 'anonymous'})
+  const User({int id = 0, String name = 'anonymous'})
       : assert(id >= 0),
-        assert(name.isNotEmpty),
         _id = id,
-        _name = name {
-    //* The constructor would initialize _id and _name before it ran the print
-    //* statement inside the braces.
-    print('User name is $_name');
-  }
+        _name = name;
   //* Named Constructor
-  User.anonymous() : this();
+  const User.anonymous() : this();
 
   //* Dart is finally convinced that id and name are guaranteed to be initialized.
   final int _id;
