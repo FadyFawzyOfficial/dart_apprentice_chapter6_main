@@ -27,9 +27,9 @@ void constructors() {
   print(user);
   // User(id: 25, name: Fady)
   final vicki = User(id: 24, name: 'Vicki');
-  vicki.name = 'Nefarious Hacker';
+  // vicki.name = 'Nefarious Hacker';
   print(vicki);
-  // User(id: 24, name: Nefarious Hacker)
+  // User(id: 24, name: Vicki)
   final anonymousUser = User.anonymous();
   print(anonymousUser);
   // User(id: 0, name: anonymous)

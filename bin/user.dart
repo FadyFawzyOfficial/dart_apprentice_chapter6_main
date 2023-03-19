@@ -19,16 +19,22 @@ class User {
 
   // Adding named parameters for User
   //* Unnamed Constructor
-  User({this.id = 0, this.name = 'anonymous'});
+  User({int id = 0, String name = 'anonymous'})
+      : _id = id,
+        _name = name {
+    //* The constructor would initialize _id and _name before it ran the print
+    //* statement inside the braces.
+    print('User name is $_name');
+  }
   //* Named Constructor
   User.anonymous() : this();
 
   //* Dart is finally convinced that id and name are guaranteed to be initialized.
-  int id;
-  String name;
+  int _id;
+  String _name;
 
-  String toJson() => '{"id": $id, "name": "$name"}';
+  String toJson() => '{"id": $_id, "name": "$_name"}';
 
   @override
-  String toString() => 'User(id: $id, name: $name)';
+  String toString() => 'User(id: $_id, name: $_name)';
 }
