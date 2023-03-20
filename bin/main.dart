@@ -6,6 +6,7 @@ import 'user.dart';
 void main() {
   dartClasses();
   constructors();
+  dartObjects();
 }
 
 void dartClasses() {
@@ -43,7 +44,19 @@ void constructors() {
   print(fady);
 }
 
+void dartObjects() {
+  final myObject = MyClass();
+  final anotherObject = myObject;
+  print(myObject.myProperty); // 1
+  anotherObject.myProperty = 2;
+  print(myObject.myProperty); // 2
+}
+
 class Address {
   // Address(); // Default Constructor
   var value = '';
+}
+
+class MyClass {
+  int myProperty = 1;
 }
