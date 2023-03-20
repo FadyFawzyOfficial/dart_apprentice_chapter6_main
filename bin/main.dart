@@ -50,6 +50,10 @@ void dartObjects() {
   print(myObject.myProperty); // 1
   anotherObject.myProperty = 2;
   print(myObject.myProperty); // 2
+
+  const fady = User(id: 1, name: 'Fady');
+  print(fady.id);
+  print(fady.name);
 }
 
 class Address {
