@@ -1,25 +1,15 @@
 class User {
-  // Long Form Constructor
-  // User(int id, String name) {
-  //   this.id = id;
-  //   this.name = name;
-  // }
+  static const _anonymousId = 0;
+  static const _anonymousName = 'anonymous';
 
-  // Short Form Constructor
-  // User(this.id, this.name);
-
-  // Named Constructor
-  // User.anonymous() {
-  //   id = 0;
-  //   name = 'anonymous';
-  // }
-
-  // Forwarding Constructor
-  // User.anonymous() : this(0, 'anonymous');
+  //* Dart is finally convinced that id and name are guaranteed to be initialized.
+  final int id;
+  final String name;
 
   // Adding named parameters for User
   //* Unnamed Constructor
-  const User({this.id = 0, this.name = 'anonymous'}) : assert(id >= 0);
+  const User({this.id = _anonymousId, this.name = _anonymousName})
+      : assert(id >= 0);
   //* Named Constructor
   const User.anonymous() : this();
 
@@ -32,10 +22,6 @@ class User {
     final userName = map['name'] as String;
     return User(id: userId, name: userName);
   }
-
-  //* Dart is finally convinced that id and name are guaranteed to be initialized.
-  final int id;
-  final String name;
 
   String toJson() => '{"id": $id, "name": "$name"}';
 
