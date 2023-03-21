@@ -71,7 +71,11 @@ void staticMembers() {
   print(value);
   SomeClass.myMethod();
 
-  final mySingleton = MySingleton.instance;
+  //* The advantage here is that you can hide the fact that it’s a singleton
+  //* from whoever uses it:
+  //* This gives you the freedom to change it back into a generative constructor
+  //* later without affecting the code in other parts of your project.
+  final mySingleton = MySingleton();
   print(mySingleton);
 }
 
@@ -104,7 +108,11 @@ class SomeClass {
 }
 
 class MySingleton {
-  static final MySingleton instance = MySingleton._();
+  static final MySingleton _instance = MySingleton._();
 
   MySingleton._();
+
+  //* Since factory constructors don’t need to return new instances of an object,
+  //* you can also implement the singleton pattern with a factory constructor:
+  factory MySingleton() => _instance;
 }
