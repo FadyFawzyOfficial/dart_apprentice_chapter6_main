@@ -77,6 +77,10 @@ void staticMembers() {
   //* later without affecting the code in other parts of your project.
   final mySingleton = MySingleton();
   print(mySingleton);
+
+  final map = {'id': 10, 'name': 'Fady'};
+  final fady = User.fromJson(map);
+  print(fady);
 }
 
 class Address {

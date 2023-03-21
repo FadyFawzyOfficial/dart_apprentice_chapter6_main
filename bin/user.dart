@@ -17,7 +17,13 @@ class User {
   //     : _id = map['id'] as int,
   //       _name = map['name'] as String;
 
-  factory User.fromJson(Map<String, Object> map) {
+  // factory User.fromJson(Map<String, Object> map) {
+  //   final userId = map['id'] as int;
+  //   final userName = map['name'] as String;
+  //   return User(id: userId, name: userName);
+  // }
+
+  static User fromJson(Map<String, Object> map) {
     final userId = map['id'] as int;
     final userName = map['name'] as String;
     return User(id: userId, name: userName);
