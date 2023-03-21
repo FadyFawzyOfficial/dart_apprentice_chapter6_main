@@ -7,6 +7,7 @@ void main() {
   dartClasses();
   constructors();
   dartObjects();
+  staticMembers();
 }
 
 void dartClasses() {
@@ -65,6 +66,12 @@ void dartObjects() {
   print(emailString);
 }
 
+void staticMembers() {
+  final value = SomeClass.myProperty;
+  print(value);
+  SomeClass.myMethod();
+}
+
 class Address {
   // Address(); // Default Constructor
   var value = '';
@@ -83,4 +90,12 @@ class Email {
 
   // String get value => _address;
   // set value(String address) => _address = address;
+}
+
+class SomeClass {
+  static int myProperty = 0;
+
+  static void myMethod() {
+    print('Hello, Dart!');
+  }
 }
