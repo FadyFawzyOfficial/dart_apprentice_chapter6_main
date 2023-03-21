@@ -70,6 +70,9 @@ void staticMembers() {
   final value = SomeClass.myProperty;
   print(value);
   SomeClass.myMethod();
+
+  final mySingleton = MySingleton.instance;
+  print(mySingleton);
 }
 
 class Address {
@@ -98,4 +101,10 @@ class SomeClass {
   static void myMethod() {
     print('Hello, Dart!');
   }
+}
+
+class MySingleton {
+  static final MySingleton instance = MySingleton._();
+
+  MySingleton._();
 }
