@@ -55,8 +55,12 @@ void dartObjects() {
   print(fady.id);
   print(fady.name);
 
-  final email = Email();
-  email.value = 'Fady@Fady.com';
+  // That’s the beauty of how Dart handles class properties.
+  // You can change the internal implementation, without the external world
+  // being any the wiser.
+  // final email = Email();
+  // email.value = 'Fady@Fady.com';
+  final email = Email('Fady@Fawzy.com');
   final emailString = email.value;
   print(emailString);
 }
@@ -71,8 +75,12 @@ class MyClass {
 }
 
 class Email {
-  var _address = '';
+  // Dart implicitly generates the needed getters and setters for you.
+  // That’s quite a bit more readable and it still works exactly the same:
+  final String value;
 
-  String get value => _address;
-  set value(String address) => _address = address;
+  const Email(this.value);
+
+  // String get value => _address;
+  // set value(String address) => _address = address;
 }
