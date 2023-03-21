@@ -54,6 +54,11 @@ void dartObjects() {
   const fady = User(id: 1, name: 'Fady');
   print(fady.id);
   print(fady.name);
+
+  final email = Email();
+  email.value = 'Fady@Fady.com';
+  final emailString = email.value;
+  print(emailString);
 }
 
 class Address {
@@ -63,4 +68,11 @@ class Address {
 
 class MyClass {
   int myProperty = 1;
+}
+
+class Email {
+  var _address = '';
+
+  String get value => _address;
+  set value(String address) => _address = address;
 }
